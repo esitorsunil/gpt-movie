@@ -8,9 +8,17 @@ export const API_OPTION = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZmYzYjA3YjRiMWEyZGIxY2Q1OTFiMDJlMGQ2MmYwZiIsIm5iZiI6MTcyNzExMTgyNi4wMTU2Miwic3ViIjoiNjZmMWExMTQ3MzAwYTViYTIxM2JhZTJjIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.PtKOfUnPHa02ZM8EqqdDkxPL2SEAMxIuyVYydvqfaw4'
+      Authorization: 'Bearer ' + process.env.REACT_APP_TMDB_API_KEY
     }
   };
+
+  export const API_OPTIONS = {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZmYzYjA3YjRiMWEyZGIxY2Q1OTFiMDJlMGQ2MmYwZiIsIm5iZiI6MTcyNzg2MzQ4NC45MzMzOTMsInN1YiI6IjY2ZjFhMTE0NzMwMGE1YmEyMTNiYWUyYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.pV3HZ6lFNaS1o42o4CcKMwBpjypbVabB3UYD8WzMoZY",
+      }
+    };
 
   export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
 
@@ -21,3 +29,5 @@ export const API_OPTION = {
     {identifier:"tamil", name: "Tamil"},
     {identifier:"french", name: "French"},
   ];
+
+  export const OPENAI_KEY = process.env.REACT_APP_OPENAPI_KEY
